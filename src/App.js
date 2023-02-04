@@ -36,9 +36,9 @@ const SaveButton = styled.button`
   height: 20px;
   width: auto;
   border-radius: 5px;
-  background-color: hsla(0, 0%, 100%, 1);
+  background-color:  rgb(255, 255, 255);
   border: 1px solid rgb(0 122 255);
-  color: rgb(0 122 255);
+  color: black;
 `
 
 function App() {
@@ -58,7 +58,7 @@ function App() {
     const newNote = {
       id: newId,
       title: `New note ${newId}`,
-      text: "This is the text area. This is the text area.",
+      text: "Click to change text.",
       posX: 100,
       posY: 100,
     } 
@@ -99,7 +99,7 @@ function App() {
     <div>
       <HeaderBar>
         <HeaderBarContent>
-          <h2>N o t e B o a r d</h2>
+          <h2>StickyBoard</h2>
           <div>
             <SaveButton onClick={saveToLocal}>Save to local</SaveButton> &nbsp;
             <SaveButton onClick={getFromLocal}>Load from local</SaveButton>
