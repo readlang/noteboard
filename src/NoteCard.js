@@ -6,7 +6,7 @@ const Container = styled.div`
     left: ${props => props.x || "100"}px;
     top: ${props => props.y || "100"}px;
     width: 200px;
-    height: 200px;
+    height: auto;
 `
 const Header = styled.div`
     width: 100%;
@@ -32,7 +32,7 @@ function NoteCard({note, editNote}) {
     }
 
     return(
-        <Container x={note.posX} y={note.posY} draggable = "true"
+        <Container className="noteCard" x={note.posX} y={note.posY} draggable = "true"
             onDragStart={(e) => setStartPos({x: e.clientX, y: e.clientY})} 
             onDragEnd={(e) => moveNote(e.clientX, e.clientY) } >
             <Header />
